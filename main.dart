@@ -1,23 +1,19 @@
-import 'anggota.dart';
-import 'buku.dart';
-import 'peminjaman.dart';
+import 'package:flutter/material.dart';
+import 'studikasus01.dart'
 
-void main() {
-  // Membuat objek buku
-  var buku1 = Buku('Belajar OOP Dart', 'Ada Programmer', 2023);
-  var buku2 = Buku('Pemrograman Flutter', 'Pengembang Aplikasi', 2024);
 
-  // Menampilkan informasi tentang buku
-  buku1.info();
-  buku2.info();
+void main(){
+  runApp(const MyApp());
+}
 
-  // Membuat objek anggota
-  var anggota1 = Anggota('Alice', 'A001');
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-  // Membuat objek peminjaman dari buku
-  var peminjaman =
-      Peminjaman(buku1.judul, buku1.pengarang, buku1.tahunTerbit, anggota1);
-
-  //menampilkan informasi peminjaman
-  peminjaman.info();
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Pertemuan 01',
+      home:studikasus01(),
+    );
+  }
 }
